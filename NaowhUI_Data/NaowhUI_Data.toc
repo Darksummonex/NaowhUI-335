@@ -1,8 +1,9 @@
 ## Interface: 30300
 ## Title: |cff0091edNaowh|r|cffffa300UI|r_Data
-## Notes: NaowhUI WeakAuras strings, loaded by the installer (3.3.5 personal-use port)
+## Notes: NaowhUI WeakAuras strings and Plater profile, loaded by the installer (3.3.5 personal-use port)
 ## Author: Naowh
 ## RequiredDeps: NaowhUI
 ## LoadOnDemand: 1
 
 TBC\!load.xml
+Wrath\!load.xml

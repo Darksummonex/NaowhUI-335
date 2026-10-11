@@ -50,6 +50,43 @@ I.installer = {
             NaowhUIInstallFrame.Option2:SetText("1080p")
         end,
         [3] = function()
+            NaowhUIInstallFrame.SubTitle:SetText("ElvUI")
+
+            if not NUI:IsAddOnEnabled("ElvUI") or not SE.CanSetupElvUI() then
+                NaowhUIInstallFrame.Desc2:SetText("Enable ElvUI to unlock this step")
+
+                return
+            end
+
+            NaowhUIInstallFrame.Desc2:SetText("Select the ElvUI layout of your choice")
+            NaowhUIInstallFrame.Desc3:SetText("Naowh's Wrath Classic ElvUI profiles, converted for ElvUI 3.3.5a")
+            NaowhUIInstallFrame.Option1:Show()
+            NaowhUIInstallFrame.Option1:SetScript("OnClick", function() SE:Setup("ElvUI", "tank") end)
+            NaowhUIInstallFrame.Option1:SetText("Tank/DPS")
+            NaowhUIInstallFrame.Option2:Show()
+            NaowhUIInstallFrame.Option2:SetScript("OnClick", function() SE:Setup("ElvUI", "healer") end)
+            NaowhUIInstallFrame.Option2:SetText("Healer")
+        end,
+        [4] = function()
+            NaowhUIInstallFrame.SubTitle:SetText("Plater")
+
+            if not NUI:IsAddOnEnabled("Plater") or not SE.CanSetupPlater() then
+                NaowhUIInstallFrame.Desc2:SetText("Enable Plater to unlock this step")
+
+                return
+            elseif not W.CanLoadAddOn("NaowhUI_Data") then
+                NaowhUIInstallFrame.Desc2:SetText("Enable NaowhUI_Data to unlock this step")
+
+                return
+            end
+
+            NaowhUIInstallFrame.Desc2:SetText("Click on the button below to import Naowh's Plater profile")
+            NaowhUIInstallFrame.Desc3:SetText("Disable EllesmereUI Nameplates when using Plater")
+            NaowhUIInstallFrame.Option1:Show()
+            NaowhUIInstallFrame.Option1:SetScript("OnClick", function() SE:Setup("Plater") end)
+            NaowhUIInstallFrame.Option1:SetText("Import Plater")
+        end,
+        [5] = function()
             NaowhUIInstallFrame.SubTitle:SetText("General WeakAuras")
 
             local blocked = WeakAurasBlocked()
@@ -66,7 +103,7 @@ I.installer = {
             NaowhUIInstallFrame.Option1:SetScript("OnClick", function() SE:Setup("WeakAuras", "core") end)
             NaowhUIInstallFrame.Option1:SetText("Core")
         end,
-        [4] = function()
+        [6] = function()
             local class = strlower(NUI.class)
 
             NaowhUIInstallFrame.SubTitle:SetText("Class WeakAura")
@@ -92,7 +129,7 @@ I.installer = {
             NaowhUIInstallFrame.Option2:SetScript("OnClick", function() SE:Setup("WeakAuras", class .. "1080p") end)
             NaowhUIInstallFrame.Option2:SetText("1080p")
         end,
-        [5] = function()
+        [7] = function()
             NaowhUIInstallFrame.SubTitle:SetText("Installation Complete")
             NaowhUIInstallFrame.Desc2:SetText("You have completed the installation process")
             NaowhUIInstallFrame.Desc3:SetText("Please click on 'Reload' to reload your UI")
@@ -104,9 +141,11 @@ I.installer = {
     StepTitles = {
         [1] = "Welcome",
         [2] = "EllesmereUI",
-        [3] = "General WeakAuras",
-        [4] = "Class WeakAura",
-        [5] = "Installation Complete"
+        [3] = "ElvUI",
+        [4] = "Plater",
+        [5] = "General WeakAuras",
+        [6] = "Class WeakAura",
+        [7] = "Installation Complete"
     },
     StepTitlesColorSelected = {12/255, 210/255, 157/255},
     StepTitleWidth = 200,
