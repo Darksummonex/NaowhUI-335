@@ -16,6 +16,9 @@ ns.Wrath = W
 local pairs, type, tostring, select = pairs, type, tostring, select
 local tconcat = table.concat
 
+-- ButtonFrameTemplate's OnLoad (e.g. Details' copy window) calls InGlue, which only !!!ClassicAPI defines on 3.3.5.
+if not InGlue then InGlue = function() return false end end
+
 -- One-shot timers (C_Timer.After)
 local timerFrame
 local timers = {}

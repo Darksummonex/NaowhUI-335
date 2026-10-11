@@ -32,9 +32,15 @@ function SE.Details(addon)
         return
     end
 
+    -- ApplyProfile saves the open windows into the active profile first; when that is
+    -- already Naowh it would overwrite the fresh copy, so save other profiles here instead.
+    if _detalhes:GetCurrentProfileName() ~= PROFILE then
+        _detalhes:SaveProfile()
+    end
+
     _detalhes_global.__profiles[PROFILE] = copy(D[addon])
 
-    _detalhes:ApplyProfile(PROFILE)
+    _detalhes:ApplyProfile(PROFILE, true)
 
     SE.CompleteSetup(addon)
 end
