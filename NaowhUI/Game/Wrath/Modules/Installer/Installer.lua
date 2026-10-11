@@ -87,6 +87,25 @@ I.installer = {
             NaowhUIInstallFrame.Option1:SetText("Import Plater")
         end,
         [5] = function()
+            NaowhUIInstallFrame.SubTitle:SetText("Details")
+
+            if not NUI:IsAddOnEnabled("Details") or not SE.CanSetupDetails() then
+                NaowhUIInstallFrame.Desc2:SetText("Enable Details to unlock this step")
+
+                return
+            elseif not W.CanLoadAddOn("NaowhUI_Data") then
+                NaowhUIInstallFrame.Desc2:SetText("Enable NaowhUI_Data to unlock this step")
+
+                return
+            end
+
+            NaowhUIInstallFrame.Desc2:SetText("Click on the button below to import Naowh's Details profile")
+            NaowhUIInstallFrame.Desc3:SetText("Naowh's Wrath Classic Details profile, converted for Details 3.3.5a")
+            NaowhUIInstallFrame.Option1:Show()
+            NaowhUIInstallFrame.Option1:SetScript("OnClick", function() SE:Setup("Details") end)
+            NaowhUIInstallFrame.Option1:SetText("Import Details")
+        end,
+        [6] = function()
             NaowhUIInstallFrame.SubTitle:SetText("General WeakAuras")
 
             local blocked = WeakAurasBlocked()
@@ -103,7 +122,7 @@ I.installer = {
             NaowhUIInstallFrame.Option1:SetScript("OnClick", function() SE:Setup("WeakAuras", "core") end)
             NaowhUIInstallFrame.Option1:SetText("Core")
         end,
-        [6] = function()
+        [7] = function()
             local class = strlower(NUI.class)
 
             NaowhUIInstallFrame.SubTitle:SetText("Class WeakAura")
@@ -129,7 +148,7 @@ I.installer = {
             NaowhUIInstallFrame.Option2:SetScript("OnClick", function() SE:Setup("WeakAuras", class .. "1080p") end)
             NaowhUIInstallFrame.Option2:SetText("1080p")
         end,
-        [7] = function()
+        [8] = function()
             NaowhUIInstallFrame.SubTitle:SetText("Installation Complete")
             NaowhUIInstallFrame.Desc2:SetText("You have completed the installation process")
             NaowhUIInstallFrame.Desc3:SetText("Please click on 'Reload' to reload your UI")
@@ -143,9 +162,10 @@ I.installer = {
         [2] = "EllesmereUI",
         [3] = "ElvUI",
         [4] = "Plater",
-        [5] = "General WeakAuras",
-        [6] = "Class WeakAura",
-        [7] = "Installation Complete"
+        [5] = "Details",
+        [6] = "General WeakAuras",
+        [7] = "Class WeakAura",
+        [8] = "Installation Complete"
     },
     StepTitlesColorSelected = {12/255, 210/255, 157/255},
     StepTitleWidth = 200,

@@ -1,5 +1,6 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/">
     <Script file="EllesmereUI.lua"/>
+    <Script file="Details.lua"/>
     <Script file="ElvUI.lua"/>
     <Script file="Plater.lua"/>
     <Script file="WeakAuras.lua"/>

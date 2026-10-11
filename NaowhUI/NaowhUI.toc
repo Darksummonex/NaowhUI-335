@@ -3,9 +3,9 @@
 ## Notes: Naowh's profile installer (3.3.5 personal-use port). /nui install
 ## Author: Naowh / 3.3.5 personal port
 ## Dependencies: NaowhUI_Media
-## OptionalDeps: EllesmereUI, ElvUI, WeakAuras
+## OptionalDeps: EllesmereUI, ElvUI, Details, WeakAuras
 ## SavedVariables: NaowhUIDB
-## Version: 20261010.01
+## Version: 20261010.02
 ## X-335-Port: 0.1
 
 Compat_335.lua

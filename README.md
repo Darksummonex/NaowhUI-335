@@ -18,6 +18,7 @@ installer, built as a plugin for the
   for ElvUI 3.3.5a.
 - Optional Plater step: Naowh's Wrath Classic Plater profile, for Plater 3.3.5a. Disable
   EllesmereUI Nameplates when using it.
+- Optional Details step: Naowh's Wrath Classic Details profile, converted for Details 3.3.5a.
 - Imports the class WeakAuras (Merfin's WotLK class auras, 1080p or 1440p, all 10 classes)
   re-anchored to EllesmereUI unit frames, plus the general NaowhUI WeakAuras.
 - NaowhUI_EUI adds the Naowh skin, top bar, icons, nameplate and cooldown styling, and QoL
@@ -28,7 +29,7 @@ installer, built as a plugin for the
 - WoW 3.3.5a client.
 - [EllesmereUI 3.3.5a](https://github.com/Darksummonex/EUI-port/releases) (Core and Options at least).
 - WeakAuras for 3.3.5a (optional, needed for the WeakAuras step).
-- ElvUI 3.3.5a and Plater 3.3.5a (optional, only for their steps).
+- ElvUI 3.3.5a, Plater 3.3.5a and Details 3.3.5a (optional, only for their steps).
 - The four NaowhUI fonts from the official NaowhUI_Media (not included, see below).
 
 ## Installation
