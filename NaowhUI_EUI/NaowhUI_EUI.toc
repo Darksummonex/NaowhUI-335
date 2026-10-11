@@ -1,0 +1,25 @@
+## Interface: 30300
+## Title: |cff0091edNaowh|r|cffffa300UI|r_EUI
+## Notes: Naowh's curated companion for EllesmereUI (3.3.5 personal port). Injects a NaowhUI category and overrides.
+## Author: NaowhUI / 3.3.5 backport
+## Version: 1.1.7-335-0.1
+## Dependencies: EllesmereUI
+## SavedVariables: NaowhUIEUIDB
+## IconTexture: Interface\AddOns\NaowhUI_EUI\media\NaowhTarget.tga
+
+NaowhUI_Core.lua
+
+NaowhUI_SpecOverrides.lua
+NaowhUI_Uninstall.lua
+
+Modules\NaowhUI_TopBar.lua
+Modules\NaowhUI_CDM.lua
+Modules\NaowhUI_Frames.lua
+Modules\NaowhUI_Icons.lua
+Modules\NaowhUI_Nameplates.lua
+Modules\NaowhUI_BlizzardSkin.lua
+QoL\NaowhUI_QoLShim.lua
+QoL\NaowhUI_QoL_DeathRelease.lua
+QoL\NaowhUI_QoL_CoTank.lua
+QoL\NaowhUI_QoL_Stealth.lua
+QoL\NaowhUI_QoL.lua

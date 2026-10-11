@@ -1,0 +1,10 @@
+## Interface: 30300
+## Title: |cff0091edNaowh|r|cffffa300UI|r_Media
+## Notes: NaowhUI fonts, sounds and statusbars for LibSharedMedia (3.3.5 personal-use port)
+## Version: 3.3.5-media-1.0
+## X-Embeds: LibStub, CallbackHandler-1.0, LibSharedMedia-3.0
+
+Compat_335.lua
+embeds.xml
+
+Shared\!load.xml
