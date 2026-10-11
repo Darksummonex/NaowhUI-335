@@ -18,6 +18,8 @@ local tconcat = table.concat
 
 -- ButtonFrameTemplate's OnLoad (e.g. Details' copy window) calls InGlue, which only !!!ClassicAPI defines on 3.3.5.
 if not InGlue then InGlue = function() return false end end
+-- Plater's DetailsFramework reads Details.cached_roles, which Details 3.3.5 (v8.3.0) lacks.
+if _detalhes and not _detalhes.cached_roles then _detalhes.cached_roles = {} end
 
 -- One-shot timers (C_Timer.After)
 local timerFrame
