@@ -18,6 +18,7 @@ installer, built as a plugin for the
   for ElvUI 3.3.5a.
 - Optional Plater step: Naowh's Wrath Classic Plater profile, for Plater 3.3.5a. Disable
   EllesmereUI Nameplates when using it.
+  Includes the original `Core/Media/Textures/arrow_glow.tga` path used by the Double Arrows target indicator.
 - Optional Details step: Naowh's Wrath Classic Details profile, converted for Details 3.3.5a.
 - Imports the class WeakAuras (Merfin's WotLK class auras, 1080p or 1440p, all 10 classes)
   re-anchored to EllesmereUI unit frames, plus the general NaowhUI WeakAuras.
